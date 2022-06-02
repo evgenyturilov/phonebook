@@ -4,12 +4,18 @@ import interface_module as im
 import log_module as lm
 
 def module1():    # Функция, инициируемая при первичном вводе данных от пользователя
-  fn = im.first_name()
-  sn = im.second_name()
-  tn = im.tel_number()
-  com = im.comments()
-  lm.log(fn, sn, tn, com)
-  return(fn, sn, tn, com)
+  inv = im.invitation()
+  if inv == 'y':
+    fn = im.first_name()
+    sn = im.second_name()
+    tn = im.tel_number()
+    com = im.comments()
+    lm.log(fn, sn, tn, com)
+  elif inv == 'n':
+    exit('Гудбай!')
+  else:
+    print('Введена неверная команда!\n ')
+    return module1()
 
 def module2():    # Функция, инициируемая при повторных вводах данных от пользователя
   req = im.request()
