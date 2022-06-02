@@ -1,9 +1,24 @@
-def request():
-  global first_name
-  global second_name
-  global tel_number
-  global comments
-  first_name = input('Введите имя абонента: ')
-  second_name = input('Введите фамилию абонента: ')
-  tel_number = input('Введите номер абонента: ')
-  comments = input('Добавьте информацию: ')
+# Модуль предоставления и считывания информации от пользователя
+
+def invitation():    # Функция для приглашения пользователя к началу работы
+  inv = input('Телефонный справочник v.1.0\n\nДля продолжения нажмите (Y/N): ')
+  inv.lower()
+  return inv
+
+def first_name():
+  return input('Введите имя абонента: ')
+  
+def second_name():
+  return input('Введите фамилию абонента: ')
+  
+def tel_number():
+  return input('Введите номер абонента: ')
+
+def comments():
+  return input('Добавьте информацию: ')
+
+def request():    # Функция для передачу пользователю запроса на продолжение работы
+  req = input('Хотите внести следующую запись? (Y/N) ')
+  req.lower()
+  return req
+  
