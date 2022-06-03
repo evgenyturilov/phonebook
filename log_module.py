@@ -5,7 +5,7 @@ def rd_txt():
     print(f'\n{file.read()}')
     
 def logger(data):
-  count = sum(1 for line in open('phonebook.txt', 'r')) + 1
+  count = 1 + sum(1 for line in open('phonebook.txt', 'r'))
   with open('phonebook.txt', 'a') as file:
     file.write(f'{count}. Имя: {data[0]} {data[1]}, тел. {data[2]}, прим. {data[3]}\n')
   with open('phonebook.csv', 'a') as file:
