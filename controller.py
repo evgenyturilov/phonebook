@@ -1,6 +1,7 @@
-import data_module as dm
+import logic_module as lm
+import interface_module as im
 
 def activation():
-    dm.module1()
-    dm.module2()
+  im.title()
+  lm.main_logic()
   
