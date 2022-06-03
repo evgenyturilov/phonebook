@@ -6,16 +6,13 @@ def title():
 def invitation():
   return input('\nВыберете действие:\n\n  Сделать новую запись   - 1\n  Отобразить контакты    - 2\n  Выйти из приложения    - 3\n\n')
 
-def first_name():
-  return input('\n  Введите имя абонента: ')
-  
-def second_name():
-  return input('  Введите фамилию абонента: ')
-  
-def tel_number():
-  return input('  Введите номер абонента: ')
-
-def comments():
-  return input('  Добавьте информацию: ')
+def user_data():
+  data = [
+    input('\n  Введите имя абонента: '),
+    input('  Введите фамилию абонента: '),
+    input('  Введите номер абонента: '),
+    input('  Добавьте информацию: ')
+          ]
+  return data
 
   
